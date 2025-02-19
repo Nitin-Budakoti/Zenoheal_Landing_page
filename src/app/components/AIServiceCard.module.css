@@ -1,0 +1,158 @@
+/* Main Container */
+.serviceContainer {
+  display: flex;
+  flex-direction: column; /* Stack text and cards */
+  align-items: center;
+  background-color: rgba(3, 7, 28, 1);
+  padding: 50px 20px;
+  color: white;
+  gap: 30px; /* More gap between sections */
+  margin: 20px 70px;
+}
+
+/* Left Section: Text */
+.textSection {
+  max-width: 500px;
+  text-align: center; /* Center aligns text and button */
+  margin: 0 auto; /* Centers the section horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  color: #a070ff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.sectionSubtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.sectionSubtitle .highlight {
+  color: #a070ff;
+}
+
+.sectionDescription {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.learnMoreButton {
+  background-color: #a070ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px; /* Adds spacing above */
+}
+
+.learnMoreButton:hover {
+  background-color: #8a5be3;
+  transform: translateY(-3px);
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+/* Right Section: Cards */
+.cardsSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards in one row */
+  gap: 30px; /* Space between cards */
+  justify-content: center;
+  align-items: stretch; /* Ensures equal height */
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #1e1b3a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  min-height: 250px; /* Ensures equal height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Keeps content evenly spaced */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cardIcon {
+  font-size: 50px;
+  color: #a070ff;
+  margin-bottom: 15px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #ccc;
+  flex-grow: 1; /* Allows text to fill evenly */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cardsSection {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceContainer {
+    padding: 30px 10px;
+    margin: 20px;
+  }
+
+  .textSection {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cardsSection {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%; /* Ensures equal width for all cards */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsSection {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row for very small screens */
+  }
+}

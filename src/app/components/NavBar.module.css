@@ -1,0 +1,126 @@
+/* General Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: hsl(0, 0%, 50%); /* Gray background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Navbar Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navLinks li {
+  margin: 0;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: #cfcfcf;
+}
+
+/* Contact Us Button */
+.contactUs a {
+  padding: 0.5rem 1rem;
+  background-color: #6e38f5;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.contactUs a:hover {
+  background-color: #4c27a0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: hsl(0, 0%, 50%);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 1rem;
+  }
+
+  .navLinks.showMenu {
+    display: flex;
+  }
+
+  .contactUs {
+    text-align: center;
+  }
+}
+
+/* Hamburger Animation */
+.navbar.active .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar.active .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.active .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+/* Adjust the logo image size */
+.logoImage {
+  width: 120px; /* Increase the width to make it larger */
+  height: 120px; /* Set the height to maintain aspect ratio */
+  object-fit: contain; /* Ensure the image isn't distorted */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+

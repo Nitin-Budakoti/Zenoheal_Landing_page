@@ -1,0 +1,165 @@
+.frameContainer {
+  width: 100%;
+  max-width: 1524px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background: rgba(3, 7, 28, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutSection {
+  margin-top: 80px;
+  margin-left: 0px;
+  text-align: left;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.aboutImageContainer {
+  margin-left: 0px;
+  flex-shrink: 0;
+}
+
+.aboutImage {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.aboutTextContainer {
+  max-width: 800px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.aboutTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #9a7bff;
+  text-transform: uppercase;
+}
+
+.aboutHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.aboutText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #eaeaea;
+  margin-bottom: 2rem;
+}
+
+.learnMoreButton {
+  background-color: #a070ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px; /* Adds spacing above */
+
+}
+
+.learnMoreButton:hover {
+  background-color: #8a5be3;
+  transform: translateY(-3px);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #9a7bff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.servicesContainer,
+.portfolioContainer,
+.differentiatorsContainer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  width: 300px;
+  padding: 2rem;
+  background-color: #161633;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardIcon {
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cardSubtitle {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 1rem;
+}
+
+.sectionSpacing {
+  margin-bottom: 5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .aboutSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .aboutImage {
+    width: 180px; /* Reduced image size for mobile */
+  }
+
+  .aboutTextContainer {
+    max-width: 90%;
+  }
+
+  .learnMoreButton {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .servicesContainer,
+  .portfolioContainer,
+  .differentiatorsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

@@ -1,0 +1,17 @@
+/* Tailwind CSS Base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  background: rgba(3, 7, 28, 1); 
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body.digital-transformation-page {
+  background-color: red;   /* Dark background for Digital Transformation */
+  color: white;
+  font-family: var(--font-geist-sans), sans-serif;
+}

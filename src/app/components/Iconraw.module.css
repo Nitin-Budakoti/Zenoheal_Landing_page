@@ -1,0 +1,79 @@
+/* Main Container */
+.container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  border-radius: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #6e38f5;
+  padding: 20px 0;  
+  width: 85%;
+  height: 80px;
+  position: relative;
+  margin: auto;
+}
+
+/* Icon Row - Moves Right to Left */
+.iconRow {
+  display: flex;
+  gap: 100px;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: moveRightToLeft 6s linear infinite;
+}
+
+/* Keyframes: Start Outside the Right and Move Left */
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Individual Icon Styling */
+.icon {
+  font-size: 2rem;
+  color: #6e38f5;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+/* ✅ STOP THE ENTIRE ANIMATION WHEN HOVERING AN ICON */
+.iconRow:hover {
+  animation-play-state: paused !important;
+}
+
+.icon:hover {
+  color: #a46ef9;
+  transform: scale(1.5);
+}
+
+/* 🔹 Mobile Responsiveness - Adjust Speed */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: 70px;
+  }
+
+  .iconRow {
+    gap: 80px;
+    animation: moveRightToLeftMobile 8s linear infinite; /* Slower for small screens */
+  }
+
+  .icon {
+    font-size: 1.7rem;
+  }
+}
+
+/* 🔹 New Animation for Mobile (Slower Speed) */
+@keyframes moveRightToLeftMobile {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

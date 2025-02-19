@@ -1,0 +1,22 @@
+.headingContainer {
+    color: aliceblue; /* This will apply the default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; /* Adjust this value to reduce the distance from top */
+    padding-bottom: 20px; /* Optional: You can adjust padding from bottom too */
+  }
+  
+  .mainTitle {
+    font-size: 3rem; /* Adjust the size of the heading */
+    font-weight: bold; /* Makes the text bold */
+    color: white; /* Changes text color to white */
+    text-align: center; /* Centers the text */
+    text-transform: uppercase; /* Optional: Makes the text uppercase */
+    letter-spacing: 2px; /* Optional: Adds some space between letters */
+    margin: 0; /* Removes default margin */
+    padding: 10px 20px; /* Optional: Adds padding around the heading */
+    border: 2px solid white; /* Optional: Adds a border around the heading */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+  }
+  
