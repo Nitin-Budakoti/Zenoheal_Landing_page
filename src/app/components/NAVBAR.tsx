@@ -2,6 +2,7 @@
 
 import styles from "./NavBar.module.css";
 import { useState } from "react";
+import Image from "next/image"; // Import Next.js Image component
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,12 +13,14 @@ export default function NavBar() {
 
   return (
     <nav className={styles.navbar}>
-      {/* Replace the logo text with the image */}
+      {/* Updated logo with SVG */}
       <div className={styles.logo}>
-        <img
-          src="/Zenoheal photo.jpeg"
+        <Image
+          src="/Logo.svg" 
           alt="Zenoheal Logo"
-          className={styles.logoImage}
+          width={210}  
+          height={120} 
+          priority 
         />
       </div>
 
@@ -27,11 +30,7 @@ export default function NavBar() {
         <span></span>
       </div>
 
-      <ul
-        className={`${styles.navLinks} ${
-          menuOpen ? styles.showMenu : ""
-        }`}
-      >
+      <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ""}`}>
         <li>
           <a href="#home">Home</a>
         </li>
@@ -42,8 +41,8 @@ export default function NavBar() {
           <a href="#services">Services</a>
         </li>
         <li className={styles.contactUs}>
-          <a href="#contact">Contact Us</a>
-        </li>
+        <a href="mailto:business@zenoheal.com">Contact Us</a>
+      </li>
       </ul>
     </nav>
   );

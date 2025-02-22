@@ -9,14 +9,16 @@
   gap: 20px;
   margin-left: 70px;
   margin-right: 70px;
+  position: relative;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  margin-bottom: 60px;
 }
 
 /* Left Section: Cards */
 .cardsSection {
   display: flex;
   gap: 20px;
-  order: 2; /* Ensure the cards come after the heading in mobile view */
-  flex-wrap: wrap; /* Allow the cards to wrap */
+  flex-wrap: wrap;
 }
 
 .card {
@@ -24,7 +26,7 @@
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  width: 220px; /* Fixed card width */
+  width: 220px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -50,11 +52,10 @@
   color: white;
 }
 
-/* Right Section: Text and Button */
+/* Right Section: Text */
 .textSection {
   max-width: 500px;
   text-align: left;
-  order: 1; /* Ensure the heading comes first in mobile view */
 }
 
 .sectionTitle {
@@ -82,6 +83,16 @@
   color: #ccc;
 }
 
+/* Centered Learn More Button */
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: absolute;
+  bottom: -60px; /* Pushes the button below both sections */
+}
+
 .learnMoreButton {
   background-color: #a070ff;
   color: white;
@@ -96,7 +107,6 @@
   justify-content: center;
   gap: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: center; /* Center the button */
 }
 
 .learnMoreButton:hover {
@@ -109,32 +119,50 @@
 }
 
 /* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .portfolioContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .textSection {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .cardsSection {
+    justify-content: center;
+  }
+
+  .buttonContainer {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .portfolioContainer {
-    flex-direction: column; /* Stack the elements vertically */
     padding: 30px 10px;
     margin-left: 20px;
     margin-right: 20px;
   }
 
-  /* Text Section */
   .textSection {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
-  /* Cards Section */
   .cardsSection {
-    justify-content: center;
-    gap: 15px;
     flex-direction: column;
+    gap: 15px;
   }
 
   .card {
-    width: 100%; /* Full width for cards in mobile */
+    width: 100%;
     max-width: 300px;
     padding: 15px;
-    margin-bottom: 20px; /* Spacing between cards */
+    margin-bottom: 20px;
   }
 
   .learnMoreButton {
@@ -143,7 +171,6 @@
   }
 }
 
-/* Very Small Devices (e.g., mobile phones) */
 @media (max-width: 480px) {
   .sectionSubtitle {
     font-size: 1.5rem;
@@ -155,7 +182,7 @@
   }
 
   .card {
-    width: 100%; /* Full width on very small devices */
+    width: 100%;
     max-width: 200px;
     padding: 10px;
   }
